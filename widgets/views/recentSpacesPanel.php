@@ -30,7 +30,7 @@
 		  <hr />
              <?php
             // Button Get a list of most active users
-            echo CHtml::link(Yii::t('RecentSpacesModule.base', 'Get a list'), $this->createUrl('//recent_spaces/recentSpaces/list'), array(
+            echo CHtml::link(Yii::t('RecentSpacesModule.base', 'Get a list'), $this->createUrl('//recent-spaces/recentSpaces/list'), array(
                 'class' => 'btn btn-info',
                 'data-toggle' => 'modal',
                 'data-target' => '#globalModal'

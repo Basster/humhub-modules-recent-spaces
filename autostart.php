@@ -1,10 +1,10 @@
 <?php
 
 Yii::app()->moduleManager->register(array(
-    'id' => 'recent_spaces',
-    'class' => 'application.modules.recent_spaces.RecentSpacesModule',
+    'id' => 'recent-spaces',
+    'class' => 'application.modules.recent-spaces.RecentSpacesModule',
     'import' => array(
-        'application.modules.recent_spaces.*',
+        'application.modules.recent-spaces.*',
     ),
     // Events to Catch 
     'events' => array(

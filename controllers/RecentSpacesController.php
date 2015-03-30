@@ -3,7 +3,7 @@
 /**
  * Recent Spaces Controller defines actions for recent spaces.
  *
- * @package humhub.modules.recent_spaces.controllers
+ * @package humhub.modules.recent-spaces.controllers
  * @author Ole Rößner
  */
 class RecentSpacesController extends Controller
