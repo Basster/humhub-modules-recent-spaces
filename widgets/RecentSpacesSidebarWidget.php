@@ -27,6 +27,7 @@ class RecentSpacesSidebarWidget extends HWidget
     private function getRecentSpaces($range = 5)
     {
         $criteria = new CDbCriteria();
+        $criteria->condition = 'visibility <> ' . Space::VISIBILITY_NONE;
         $criteria->order = 'created_at DESC';
         $criteria->limit = $range;
 
