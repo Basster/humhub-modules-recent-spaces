@@ -27,7 +27,7 @@ class RecentSpacesModule extends HWebModule
         if (Yii::app()->moduleManager->isEnabled('recent_spaces')) {
 
             $event->sender->addWidget('application.modules.recent_spaces.widgets.RecentSpacesSidebarWidget', array(), array(
-                'sortOrder' => 0
+                'sortOrder' => 199
             ));
         }
     }
