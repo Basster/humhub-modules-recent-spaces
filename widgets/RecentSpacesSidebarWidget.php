@@ -8,7 +8,7 @@ class RecentSpacesSidebarWidget extends HWidget
         $assetPrefix = Yii::app()->assetManager->publish(__DIR__ . '/../resources', true, 0, defined('YII_DEBUG'));
         Yii::app()->clientScript->registerCssFile($assetPrefix . '/recent-spaces.css');
         
-        $noSpaces = HSetting::Get('noSpaces', 'recent-spaces');
+        $noSpaces = HSetting::Get('noSpaces', 'recent_spaces');
         $noSpaces = $noSpaces == '' || $noSpaces === null ? 0 : $noSpaces;
         $spaces = $this->getRecentSpaces($noSpaces);
         if (count($spaces) > 0) {

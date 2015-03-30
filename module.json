@@ -1,5 +1,5 @@
 {
-    "id": "recent-spaces",
+    "id": "recent_spaces",
     "name": "Recent Spaces Widget",
     "description": "Adds a panel on the Dashboard, indicating the latest spaces created.",
     "keywords": ["recent", "spaces", "widget", "dashboard"],

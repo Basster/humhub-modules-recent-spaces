@@ -3,7 +3,7 @@
 /**
  * Defines the configure actions.
  *
- * @package humhub.modules.recent-spaces.controllers
+ * @package humhub.modules.recent_spaces.controllers
  * @author Ole Rößner
  */
 class ConfigController extends Controller
@@ -50,7 +50,7 @@ class ConfigController extends Controller
      */
     public function actionConfig()
     {
-        Yii::import('recent-spaces.forms.*');
+        Yii::import('recent_spaces.forms.*');
         
         $form = new RecentSpacesConfigureForm();
         
@@ -59,11 +59,11 @@ class ConfigController extends Controller
             $form->attributes = $_POST['RecentSpacesConfigureForm'];
             
             if ($form->validate()) {
-                $form->noSpaces = HSetting::Set('noSpaces', $form->noSpaces, 'recent-spaces');
-                $this->redirect(Yii::app()->createUrl('recent-spaces/config/config'));
+                $form->noSpaces = HSetting::Set('noSpaces', $form->noSpaces, 'recent_spaces');
+                $this->redirect(Yii::app()->createUrl('recent_spaces/config/config'));
             }
         } else {
-            $form->noSpaces = HSetting::Get('noSpaces', 'recent-spaces');
+            $form->noSpaces = HSetting::Get('noSpaces', 'recent_spaces');
         }
         
         $this->render('config', array(
