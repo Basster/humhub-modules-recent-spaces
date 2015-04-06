@@ -20,9 +20,9 @@ class RecentSpacesModule extends HWebModule
     /**
      * On build of the dashboard sidebar widget, add the recent_spaces widget if module is enabled.
      *
-     * @param type $event
+     * @param CEvent $event
      */
-    public static function onSidebarInit($event)
+    public static function onSidebarInit(CEvent $event)
     {
         if (Yii::app()->moduleManager->isEnabled('recent_spaces')) {
 
