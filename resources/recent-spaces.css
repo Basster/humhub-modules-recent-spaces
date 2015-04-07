@@ -1,34 +1,37 @@
 .recent-spaces {
-	margin-left: 0;
-  	font-size: 12px;
+  margin-left: 0;
+  font-size: 12px;
 }
-
 .recent-spaces .entry {
-	margin-right: 20px;
+  margin-right: 20px;
 }
-
 .recent-spaces .entry .count {
   color: #4cd9c0;
   font-weight: 600;
   line-height: 0.8em;
 }
-
-.media .circle {
-    border-radius: 50%;
-
-    width: 36px;
-    height: 36px;
-    padding:3px;
-
-	margin-top: 7px;
-    background: transparent;
-    border: 2px solid #aeaeae;
-    color: #aeaeae;
-    text-align: center;
-    font: 20px Open Sans, sans-serif;
-	font-weight: 600;
+#recent-spaces-list .media .circle {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 3px;
+  margin-top: 7px;
+  background: transparent;
+  border: 2px solid #aeaeae;
+  color: #aeaeae;
+  text-align: center;
+  font: 20px Open Sans, sans-serif;
+  font-weight: 600;
 }
-
 #recent-spaces-panel img {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+}
+#recent-spaces-panel .panel-footer {
+  background-color: transparent;
+}
+#recent-spaces-panel ul.media-list {
+  margin-bottom: 0;
+}
+#recent-spaces-panel ul.media-list li:last-child {
+  border-bottom: none;
 }

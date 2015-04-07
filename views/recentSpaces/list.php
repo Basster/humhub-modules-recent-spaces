@@ -12,7 +12,7 @@
         </div>
         <br>
 
-        <ul class="media-list">
+        <ul class="media-list" id="recent-spaces-list">
             <?php
             $i = 0;
             foreach ($spaces as $spaceRow) {
