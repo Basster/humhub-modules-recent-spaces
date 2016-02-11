@@ -1,5 +1,7 @@
 <?php
 
-return array(
-    '<strong>Recent</strong> spaces' => '<strong>Neueste</strong> Spaces',
-);
+return [
+  '<strong>Recent</strong> spaces' => '<strong>Neueste</strong> Spaces',
+  'Wall Entries'                   => 'Beiträge',
+  'Members'                        => 'Mitglieder',
+];

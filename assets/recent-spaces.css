@@ -1,3 +1,4 @@
+/*
 .recent-spaces {
 	margin-left: 0;
   	font-size: 12px;
@@ -31,4 +32,31 @@
 
 #recent-spaces-panel img {
     margin-bottom: 5px;
+}
+*/
+/*#recent_spaces-panel .panel-body.spaces-list {*/
+/*padding-left: 0;*/
+/*}*/
+
+/*#recent_spaces-panel .panel-body .footer {*/
+/*padding-left: 0;*/
+/*}*/
+
+#recent_spaces-panel .media-list li {
+ border-bottom: none;
+ padding: 3px;
+ border-left: none;
+}
+
+#recent_spaces-panel .media-list li:hover {
+ background-color: inherit;
+ border-left: none;
+}
+
+#recent_spaces-panel .space-member-sign {
+ top: 30px;
+ left: 30px;
+ width: 20px;
+ height: 20px;
+ font-size: 11px;
 }
