@@ -64,16 +64,6 @@ use yii\helpers\Html;
                         'Members'
                       ); ?></span>
                   </div>
-                  <div class="entry pull-left">
-                    <span
-                      class="count colorInfo"><?php echo $space['wall_entries']; ?></span>
-                    <br>
-                    <span class="title"><?php echo Yii::t(
-                        'RecentSpacesModule.views_recentSpaces_list',
-                        'Wall Entries'
-                      ); ?></span>
-                  </div>
-
                 </div>
               </div>
             </div>
@@ -90,6 +80,5 @@ use yii\helpers\Html;
         ); ?>
       </div>
     </div>
-
   </div>
 </div>
