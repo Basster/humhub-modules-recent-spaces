@@ -30,7 +30,7 @@ $showMoreButton = !!Setting::Get('showMoreButton', 'recent_spaces');
     <div class="footer">
       <hr/>
 
-        <?=  Html::a(Yii::t('RecentSpacesModule.base', 'Get a list'), ['/recent_spaces/list/list'], ['class' => 'btn btn-xl btn-primary', 'data-target' => '#globalModal',]); ?>
+        <?= Html::a(Yii::t('RecentSpacesModule.base', 'Get a list'), ['/recent_spaces/list/list'], ['class' => 'btn btn-xl btn-primary', 'data-target' => '#globalModal',]); ?>
     </div>
   </div>
 </div>
