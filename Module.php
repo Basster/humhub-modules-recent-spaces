@@ -1,8 +1,11 @@
 <?php
+
 namespace humhub\modules\recent_spaces;
+
 use Yii;
 use yii\helpers\Url;
 use humhub\models\Setting;
+
 class Module extends \humhub\components\Module
 {
     /**
@@ -13,7 +16,7 @@ class Module extends \humhub\components\Module
     public static function onSidebarInit($event)
     {
         if (Yii::$app->hasModule('recent_spaces')) {
-            $event->sender->addWidget(widgets\Sidebar::className(), [], ['sortOrder' => 400]);
+            $event->sender->addWidget(widgets\Sidebar::class, [], ['sortOrder' => 400]);
         }
     }
     public function getConfigUrl()
