@@ -3,7 +3,7 @@
 use humhub\models\Setting;
 use yii\helpers\Html;
 
-humhub\modules\recent_spaces\Assets::register($this);
+humhub\modules\mostactiveusers\Assets::register($this);
 
 $showMoreButton = !!Setting::Get('showMoreButton', 'recent_spaces');
 ?>

@@ -7,7 +7,7 @@ return [
     'class' => 'humhub\modules\recent_spaces\Module',
     'namespace' => 'humhub\modules\recent_spaces',
     'events' => [
-        ['class' => Sidebar::class, 'event' => Sidebar::EVENT_INIT, 'callback' => ['humhub\modules\recent_spaces\Module', 'onSidebarInit']],
+        ['class' => Sidebar::className(), 'event' => Sidebar::EVENT_INIT, 'callback' => ['humhub\modules\recent_spaces\Module', 'onSidebarInit']],
     ],
 ];
 
