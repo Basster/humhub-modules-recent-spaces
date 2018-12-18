@@ -13,7 +13,7 @@ use yii\web\AssetBundle;
 class Assets extends AssetBundle {
 
   public $publishOptions = [
-    'forceCopy' => TRUE,
+    'forceCopy' => true,
   ];
 
   public $css = [

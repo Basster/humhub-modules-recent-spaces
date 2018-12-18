@@ -20,7 +20,7 @@ class ListController extends Controller {
   public function behaviors() {
     return [
       'acl' => [
-        'class'               => AccessControl::className(),
+        'class'               => AccessControl::class,
         'guestAllowedActions' => ['list'],
       ],
     ];

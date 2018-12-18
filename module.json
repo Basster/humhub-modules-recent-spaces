@@ -1,18 +1,19 @@
 {
-    "id": "recent_spaces",
-    "name": "Recent Spaces Widget",
-    "description": "Adds a panel on the Dashboard, indicating the latest spaces created.",
-    "keywords": ["recent", "spaces", "widget", "dashboard"],
-	"version": "0.2",
-	"authors": [
-		{
-			"name": "Ole Rößner"
-		}
-	],
-	"homepage": "https://github.com/Basster/humhub-modules-recent-spaces",
-	"license": "MIT",
-	"time": "2015-03-27",
-	"humhub": {
-		"minVersion": "0.8.0"
-	}
+   "id":"recent_spaces",
+   "name":"Recent Spaces Widget",
+   "description":"Adds a panel on the Dashboard, indicating the latest spaces created.",
+   "keywords":["recent", "spaces", "widget", "dashboard"
+   ],
+   "version":"0.3",
+   "authors":[
+      {
+         "name":"Ole Rößner"
+      }
+   ],
+   "homepage":"https://github.com/Basster/humhub-modules-recent-spaces",
+   "license":"MIT",
+   "time":"2018-12-18",
+   "humhub":{
+      "minVersion":"1.3.0"
+   }
 }
