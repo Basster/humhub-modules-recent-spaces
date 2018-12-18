@@ -4,7 +4,7 @@
    "description":"Adds a panel on the Dashboard, indicating the latest spaces created.",
    "keywords":["recent", "spaces", "widget", "dashboard"
    ],
-   "version":"0.3",
+   "version":"0.4",
    "authors":[
       {
          "name":"Ole Rößner"
