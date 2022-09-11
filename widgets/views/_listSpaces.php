@@ -66,28 +66,16 @@ use yii\helpers\Html;
 
           <div class="media-body">
             <h4 class="media-heading"><a
-                href="<?= $space->getUrl(); ?>"><?= Html::encode(
-                  $space->name
-                ); ?></a>
+                href="<?= $space->getUrl(); ?>"><?= Html::encode($space->name); ?></a>
             </h4>
-            <h5><?= Html::encode(
-                humhub\libs\Helpers::truncateText($space->description, 100)
-              ); ?></h5>
+            <h5><?= Html::encode(humhub\libs\Helpers::truncateText($space->description, 100)); ?></h5>
 
             <?php $tag_count = 0; ?>
             <?php if ($space->tags) : ?>
               <?php foreach ($space->getTags() as $tag): ?>
                 <?php if ($tag_count <= 5) { ?>
-                  <?= Html::a(
-                    $tag,
-                    [
-                      '/directory/directory/spaces',
-                      'keyword' => $tag,
-                    ],
-                    ['class' => 'label label-default']
-                  ); ?>
-                  <?php
-                  $tag_count++;
+                  <?= Html::a($tag, ['/space/spaces', 'keyword' => $tag, ], ['class' => 'label label-default']); ?>
+                  <?php $tag_count++;
                 }
                 ?>
               <?php endforeach; ?>
