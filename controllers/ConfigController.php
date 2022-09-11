@@ -2,7 +2,6 @@
 
 namespace humhub\modules\recent_spaces\controllers;
 
-use humhub\models\Setting;
 use humhub\modules\admin\components\Controller;
 use humhub\modules\recent_spaces\models\ConfigureForm;
 use Yii;
@@ -18,33 +17,17 @@ class ConfigController extends Controller {
   /**
    * Configuration Action for Super Admins
    */
-  public function actionConfig() {
-    $form             = new ConfigureForm();
-    $form->noSpaces   = Setting::Get('noSpaces', 'recent_spaces');
-    $form->showAsList = Setting::Get('showAsList', 'recent_spaces');
+    public function actionConfig()
+    {
+        $model = new ConfigureForm();
+        $model->loadSettings();
 
-    if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-      $form->noSpaces   = Setting::Set(
-        'noSpaces',
-        $form->noSpaces,
-        'recent_spaces'
-      );
-      $form->showAsList = Setting::Set(
-        'showAsList',
-        $form->showAsList,
-        'recent_spaces'
-      );
+        if ($model->load(Yii::$app->request->post()) && $model->saveSettings()) {
+            $this->view->saved();
+        }
 
-      return $this->redirect(['/recent_spaces/config/config']);
+        return $this->render('config', ['model' => $model]);
     }
-
-    return $this->render(
-      'config',
-      [
-        'model' => $form,
-      ]
-    );
-  }
 }
 
 ?>
