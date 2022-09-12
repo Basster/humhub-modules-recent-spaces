@@ -24,6 +24,7 @@ class RecentSpace extends \humhub\modules\space\models\Space {
       ]
     );
     $query->where('visibility <> ' . Space::VISIBILITY_NONE);
+    $query->orderBy('created_at DESC');
 
     return $query;
   }
