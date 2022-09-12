@@ -1,6 +1,7 @@
 <?php
 
 use humhub\modules\space\models\Space;
+use humhub\modules\space\widgets\Image;
 
 ?>
 <div>
@@ -10,14 +11,14 @@ use humhub\modules\space\models\Space;
     <?php foreach ($spaces as $space) : ?>
       <li class="space-links pull-left">
         <div class="media">
-          <?php echo \humhub\modules\space\widgets\Image::widget(
+          <?= Image::widget(
             [
-              'space'       => $space,
-              'width'       => 40,
+              'space' => $space,
+              'width' => 40,
               'htmlOptions' => [
                 'class' => 'media-object',
               ],
-              'link'        => 'true',
+              'link' => 'true',
               'linkOptions' => [
                 'class' => 'pull-left',
               ],
@@ -25,13 +26,7 @@ use humhub\modules\space\models\Space;
           ); ?>
 
           <?php if ($space->isMember()) { ?>
-            <i class="fa fa-user space-member-sign tt" data-toggle="tooltip"
-               data-placement="top"
-               title=""
-               data-original-title="<?php echo Yii::t(
-                 'DirectoryModule.views_directory_spaces',
-                 'You are a member of this space'
-               ); ?>"></i>
+            <i class="fa fa-user space-member-sign tt" data-toggle="tooltip" data-placement="top" title="" data-original-title="<?= Yii::t('RecentSpacesModule.base', 'You are a member of this space'); ?>"></i>
           <?php } ?>
       </li>
     <?php endforeach; ?>

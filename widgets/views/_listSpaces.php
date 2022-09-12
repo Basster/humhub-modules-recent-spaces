@@ -17,7 +17,7 @@ use yii\helpers\Html;
             if (!Yii::$app->user->isGuest && !$space->isMember()) {
               $followed = $space->isFollowedByUser();
               echo Html::a(
-                Yii::t('DirectoryModule.views_directory_members', 'Follow'),
+                Yii::t('RecentSpacesModule.base', 'Follow'),
                 'javascript:setFollow("' . $space->createUrl(
                   '/space/space/follow'
                 ) . '", "' . $space->id . '")',
@@ -27,7 +27,7 @@ use yii\helpers\Html;
                 ]
               );
               echo Html::a(
-                Yii::t('DirectoryModule.views_directory_members', 'Unfollow'),
+                Yii::t('RecentSpacesModule.base', 'Unfollow'),
                 'javascript:setUnfollow("' . $space->createUrl(
                   '/space/space/unfollow'
                 ) . '", "' . $space->id . '")',
@@ -40,7 +40,7 @@ use yii\helpers\Html;
             ?>
           </div>
 
-          <?php echo \humhub\modules\space\widgets\Image::widget(
+          <?= \humhub\modules\space\widgets\Image::widget(
             [
               'space' => $space,
               'width' => 50,
@@ -58,36 +58,24 @@ use yii\helpers\Html;
             <i class="fa fa-user space-member-sign tt" data-toggle="tooltip"
                data-placement="top"
                title=""
-               data-original-title="<?php echo Yii::t(
-                 'DirectoryModule.views_directory_spaces',
+               data-original-title="<?= Yii::t(
+                 'RecentSpacesModule.base',
                  'You are a member of this space'
                ); ?>"></i>
           <?php } ?>
 
           <div class="media-body">
             <h4 class="media-heading"><a
-                href="<?php echo $space->getUrl(); ?>"><?php echo Html::encode(
-                  $space->name
-                ); ?></a>
+                href="<?= $space->getUrl(); ?>"><?= Html::encode($space->name); ?></a>
             </h4>
-            <h5><?php echo Html::encode(
-                humhub\libs\Helpers::truncateText($space->description, 100)
-              ); ?></h5>
+            <h5><?= Html::encode(humhub\libs\Helpers::truncateText($space->description, 100)); ?></h5>
 
             <?php $tag_count = 0; ?>
             <?php if ($space->tags) : ?>
               <?php foreach ($space->getTags() as $tag): ?>
                 <?php if ($tag_count <= 5) { ?>
-                  <?php echo Html::a(
-                    $tag,
-                    [
-                      '/directory/directory/spaces',
-                      'keyword' => $tag,
-                    ],
-                    ['class' => 'label label-default']
-                  ); ?>
-                  <?php
-                  $tag_count++;
+                  <?= Html::a($tag, ['/space/spaces', 'keyword' => $tag, ], ['class' => 'label label-default']); ?>
+                  <?php $tag_count++;
                 }
                 ?>
               <?php endforeach; ?>
