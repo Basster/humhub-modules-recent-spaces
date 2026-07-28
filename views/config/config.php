@@ -4,10 +4,10 @@
 
 /* @var $model ConfigureForm */
 
-use humhub\libs\Html;
+use humhub\helpers\Html;
 use humhub\modules\recent_spaces\models\ConfigureForm;
-use humhub\modules\ui\form\widgets\ActiveForm;
-use humhub\modules\ui\view\components\View;
+use humhub\widgets\form\ActiveForm;
+use humhub\components\View;
 use yii\helpers\Url;
 
 ?>
