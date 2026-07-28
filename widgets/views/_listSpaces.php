@@ -1,7 +1,7 @@
 <?php
 
 use humhub\modules\space\models\Space;
-use yii\helpers\Html;
+use humhub\helpers\Html;
 
 ?>
 <div>
