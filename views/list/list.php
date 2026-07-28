@@ -1,7 +1,7 @@
 <?php
 
 use humhub\libs\Helpers;
-use yii\helpers\Html;
+use humhub\helpers\Html;
 
 ?>
 <div class="modal-dialog modal-dialog-normal animated fadeIn">
