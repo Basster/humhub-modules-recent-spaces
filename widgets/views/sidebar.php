@@ -1,6 +1,6 @@
 <?php
 
-use humhub\libs\Html;
+use humhub\helpers\Html;
 use humhub\widgets\PanelMenu;
 use humhub\modules\recent_spaces\Assets;
 
