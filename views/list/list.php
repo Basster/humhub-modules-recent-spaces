@@ -1,6 +1,5 @@
 <?php
 
-use humhub\libs\Helpers;
 use humhub\helpers\Html;
 
 ?>
